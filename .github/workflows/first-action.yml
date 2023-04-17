@@ -4,7 +4,7 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Greeting
-        run: echo "Hello World!"
-      - name: Print Goodbye
-        run: echo "Done - bye!"
+      - name: Print Both statements
+        run: |
+          echo "Hello World!"
+          echo "Done - bye!"
