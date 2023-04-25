@@ -5,7 +5,7 @@ on:
       - opened
 
 jobs:
-  Output Issue Details:
+  Output_Issue_Details:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Github Context
