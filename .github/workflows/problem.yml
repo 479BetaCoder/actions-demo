@@ -1,0 +1,33 @@
+name: Problem - Lint, Test, Build and Deploy
+on: [push]
+jobs:
+  Test and Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run Lint
+
+      - name: Test
+        run: npm run test
+      
+      - name: Build
+        run: npm run build
+  
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+      - run: echo "Deploying"
+      
+      
